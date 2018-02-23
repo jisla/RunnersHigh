@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.example.jisla2.runningapp2.Post.CreatePostActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <NumberPicker
+            android:id="@+id/mileageOnesNumberPicker"
+            android:background="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/mileageTextView"
+            android:layout_marginStart="8dp" />
+
+        <NumberPicker
+            android:id="@+id/mileageTenthsNumberPicker"
+            android:background="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/paceTextView"
+            app:layout_constraintLeft_toRightOf="@+id/mileageOnesNumberPicker"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post a run"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/mileageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mileage"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/paceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pace"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toRightOf="@+id/mileageTenthsNumberPicker"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+            android:layout_marginStart="8dp" />
+
+        <NumberPicker
+            android:id="@+id/paceMinutesNumberPicker"
+            android:background="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/mileageTenthsNumberPicker"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/paceTextView"
+            android:layout_marginStart="8dp" />
+
+        <NumberPicker
+            android:id="@+id/paceSecondsNumberPicker"
+            android:background="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/paceMinutesNumberPicker"
+            app:layout_constraintTop_toBottomOf="@+id/paceTextView"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/decimalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:textColor="#000000"
+            app:layout_constraintLeft_toRightOf="@+id/mileageOnesNumberPicker"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintRight_toLeftOf="@+id/mileageTenthsNumberPicker"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/mileageTextView"
+            app:layout_constraintBottom_toBottomOf="@+id/mileageTenthsNumberPicker"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/colonTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textColor="#000000"
+            app:layout_constraintLeft_toRightOf="@+id/paceMinutesNumberPicker"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintRight_toLeftOf="@+id/paceSecondsNumberPicker"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/paceTextView"
+            app:layout_constraintBottom_toBottomOf="@+id/paceSecondsNumberPicker"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <EditText
+            android:id="@+id/descriptionEditText"
+            android:layout_width="312dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Additional comments"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:textColor="#000000"
+            android:textColorHint="#646464"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mileageOnesNumberPicker" />
+
+        <Button
+            android:id="@+id/postButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#FF03A9F4"
+            android:text="Post"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="-30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.25" />
+
+        <ImageButton
+            android:id="@+id/addPhotoButton"
+            android:layout_width="100dp"
+            android:layout_height="88dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="43dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/postButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_camera"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionEditText" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="95dp"
+            android:layout_height="88dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/addPhotoButton"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionEditText"
+            app:srcCompat="@android:color/white" />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>
